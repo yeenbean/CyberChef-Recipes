@@ -1,0 +1,60 @@
+[
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Regex",
+                "string": "\\\\"
+            },
+            "\\\\\\\\",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Regex",
+                "string": "\""
+            },
+            "\\\\\"",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Regex",
+                "string": "\\n"
+            },
+            "\",\"",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "Pad lines",
+        "args": [
+            "Start",
+            10,
+            "\"body\": [\""
+        ]
+    },
+    {
+        "op": "Pad lines",
+        "args": [
+            "End",
+            2,
+            "\"]"
+        ]
+    }
+]
