@@ -1,0 +1,65 @@
+[
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Simple string",
+                "string": "="
+            },
+            "%",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "URL Decode",
+        "args": []
+    },
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Regex",
+                "string": ".+(?<=&u=)"
+            },
+            "",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "Find / Replace",
+        "args": [
+            {
+                "option": "Regex",
+                "string": "(?<===).+"
+            },
+            "",
+            true,
+            false,
+            true,
+            false
+        ]
+    },
+    {
+        "op": "From Base64",
+        "args": [
+            "A-Za-z0-9+/=",
+            true,
+            false
+        ]
+    },
+    {
+        "op": "Defang URL",
+        "args": [
+            true,
+            true,
+            false,
+            "Valid domains and full URLs"
+        ]
+    }
+]
